@@ -8,14 +8,6 @@ import {
   todayBalanceData, lastWeekBalanceData, lastMonthBalanceData, currentYearBalanceData, todayDealData, weeklyDealData, monthlyDealData, yealyDealData, octData, novData, decData, janData
 } from "./dashboardcrm";
 import {
-  ecomWidgets,
-  bestSellingProducts,
-  topSellers,
-  recentOrders,
-  topCategories,
-  allRevenueData, monthRevenueData, halfYearRevenueData, yearRevenueData
-} from "./dashboardEcommerce";
-import {
   cyptoWidgets,
   currencies,
   recentActivity,
@@ -99,11 +91,6 @@ export {
   tasks,
   activities,
   closingDeals,
-  ecomWidgets,
-  bestSellingProducts,
-  topSellers,
-  recentOrders,
-  topCategories,
   cyptoWidgets,
   currencies,
   topPerformers,
@@ -174,7 +161,7 @@ export {
   topartWork, featuredNFTData, popularityData, recentNFTsData, topCollectionData, popularCreatorsData, tradingArtworkData,
   nftArtworkData,
   popularCreatorsNFT, marketPlacewidget,
-  connectData, discoverItemsData, featuresData, productData, topCreatorData, allData, monthData, halfyearData, allaudiencesMetricsData, monthaudiencesMetricsData, halfyearaudiencesMetricsData, yaeraudiencesMetricsData, todayDeviceData, lastWeekDeviceData, lastMonthDeviceData, currentYearDeviceData, todayBalanceData, lastWeekBalanceData, lastMonthBalanceData, currentYearBalanceData, todayDealData, weeklyDealData, monthlyDealData, yealyDealData, octData, novData, decData, janData, allRevenueData, monthRevenueData, halfYearRevenueData, yearRevenueData, btcPortfolioData, usdPortfolioData, euroPortfolioData, MarketGraphAll, MarketGraphYear, MarketGraphMonth, MarketGraphWeek, MarketGraphHour, allProjectData, monthProjectData, halfyearProjectData, yearProjectData, allTimeData, lastWeekData, lastMonthData, lastquarterData, allMarketplaceData, monthMarketplaceData, halfyearMarketplaceData, yearMarketplaceData, todayaudiencesCountryData, lastWeekaudiencesCountryData, lastMonthaudiencesCountryData, currentyearaudiencesCountryData, dashboardChat, gallery, pricing1, pricing2, pricing3, projects, document, SearchGallery, news, video, swiper, team,
+  connectData, discoverItemsData, featuresData, productData, topCreatorData, allData, monthData, halfyearData, allaudiencesMetricsData, monthaudiencesMetricsData, halfyearaudiencesMetricsData, yaeraudiencesMetricsData, todayDeviceData, lastWeekDeviceData, lastMonthDeviceData, currentYearDeviceData, todayBalanceData, lastWeekBalanceData, lastMonthBalanceData, currentYearBalanceData, todayDealData, weeklyDealData, monthlyDealData, yealyDealData, octData, novData, decData, janData, btcPortfolioData, usdPortfolioData, euroPortfolioData, MarketGraphAll, MarketGraphYear, MarketGraphMonth, MarketGraphWeek, MarketGraphHour, allProjectData, monthProjectData, halfyearProjectData, yearProjectData, allTimeData, lastWeekData, lastMonthData, lastquarterData, allMarketplaceData, monthMarketplaceData, halfyearMarketplaceData, yearMarketplaceData, todayaudiencesCountryData, lastWeekaudiencesCountryData, lastMonthaudiencesCountryData, currentyearaudiencesCountryData, dashboardChat, gallery, pricing1, pricing2, pricing3, projects, document, SearchGallery, news, video, swiper, team,
   recentFile, folderList, todoTaskList, chatContactData, todoCollapse,
   jobApplication,
   apiKey

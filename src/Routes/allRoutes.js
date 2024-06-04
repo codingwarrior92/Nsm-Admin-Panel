@@ -2,7 +2,6 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 
 //Dashboard
-import DashboardEcommerce from "../pages/DashboardEcommerce";
 import CoinMgt from "../pages/CoinAnalyzer/CoinMgt";
 import CoinGraph from "../pages/CoinAnalyzer/CoinGraph";
 import ClientSetting from "../pages/NewsMgt/ClientSetting";

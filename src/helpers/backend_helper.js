@@ -280,14 +280,6 @@ export const getNovSalesData = () => api.get(url.GET_NOVSALES_DATA);
 export const getDecSalesData = () => api.get(url.GET_DECSALES_DATA);
 export const getJanSalesData = () => api.get(url.GET_JANSALES_DATA);
 
-// Dashboard Ecommerce
-// Revenue
-export const getAllRevenueData = () => api.get(url.GET_ALLREVENUE_DATA);
-export const getMonthRevenueData = () => api.get(url.GET_MONTHREVENUE_DATA);
-export const getHalfYearRevenueData = () => api.get(url.GET_HALFYEARREVENUE_DATA);
-export const getYearRevenueData = () => api.get(url.GET_YEARREVENUE_DATA);
-
-
 // Dashboard Crypto
 // Portfolio
 export const getBtcPortfolioData = () => api.get(url.GET_BTCPORTFOLIO_DATA);
