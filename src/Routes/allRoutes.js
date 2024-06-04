@@ -3,6 +3,10 @@ import { Navigate } from "react-router-dom";
 
 //Dashboard
 import DashboardEcommerce from "../pages/DashboardEcommerce";
+import CoinMgt from "../pages/CoinAnalyzer/CoinMgt";
+import CoinGraph from "../pages/CoinAnalyzer/CoinGraph";
+import ClientSetting from "../pages/NewsMgt/ClientSetting";
+import KeywordSetting from "../pages/NewsMgt/KeywordSetting";
 
 //login
 import Login from "../pages/Authentication/Login";
@@ -14,8 +18,11 @@ import Register from "../pages/Authentication/Register";
 import UserProfile from "../pages/Authentication/user-profile";
 
 const authProtectedRoutes = [
-  { path: "/dashboard", component: <DashboardEcommerce /> },
-  { path: "/index", component: <DashboardEcommerce /> },
+  { path: "/coin-management", component: <CoinMgt /> },
+  { path: "/coin-graph", component: <CoinGraph /> },
+
+  { path: "/client-setting", component: <ClientSetting /> },
+  { path: "/keyword-setting", component: <KeywordSetting /> },
 
   //User Profile
   { path: "/profile", component: <UserProfile /> },

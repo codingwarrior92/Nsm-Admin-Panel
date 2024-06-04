@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 const Navdata = () => {
     const history = useNavigate();
     //state data
-    const [isDashboard, setIsDashboard] = useState(false);
-
-    const [iscurrentState, setIscurrentState] = useState('Dashboard');
+    const [isCoinAnalyzer, setIsCoinAnalyzer] = useState(false);
+    const [isNewsMgt, setIsNewsMgt] = useState(false);
+    const [iscurrentState, setIscurrentState] = useState('CoinAnalyzer');
 
     function updateIconSidebar(e) {
         if (e && e.target && e.target.getAttribute("subitems")) {
@@ -24,13 +24,17 @@ const Navdata = () => {
 
     useEffect(() => {
         document.body.classList.remove('twocolumn-panel');
-        if (iscurrentState !== 'Dashboard') {
-            setIsDashboard(false);
+        if (iscurrentState !== 'CoinAnalyzer') {
+            setIsCoinAnalyzer(false);
+        }
+        if (iscurrentState !== 'NewsMgt') {
+            setIsNewsMgt(false);
         }
     }, [
         history,
         iscurrentState,
-        isDashboard,
+        isCoinAnalyzer,
+        isNewsMgt
     ]);
 
     const menuItems = [
@@ -39,23 +43,56 @@ const Navdata = () => {
             isHeader: true,
         },
         {
-            id: "dashboard",
-            label: "Dashboards",
+            id: "coinanalyzer",
+            label: "Coin Analyze",
             icon: "ri-dashboard-2-line",
             link: "/#",
-            stateVariables: isDashboard,
+            stateVariables: isCoinAnalyzer,
             click: function (e) {
                 e.preventDefault();
-                setIsDashboard(!isDashboard);
-                setIscurrentState('Dashboard');
+                setIsCoinAnalyzer(!isCoinAnalyzer);
+                setIscurrentState('CoinAnalyzer');
                 updateIconSidebar(e);
             },
             subItems: [
                 {
-                    id: "ecommerce",
-                    label: "Ecommerce",
-                    link: "/dashboard",
-                    parentId: "dashboard",
+                    id: "CoinMangement",
+                    label: "Coin Management",
+                    link: "/coin-management",
+                    parentId: "coinanalyzer",
+                },
+                {
+                    id: "Coin Graph",
+                    label: "Coin Graph",
+                    link: "/coin-graph",
+                    parentId: "coinanalyzer",
+                },
+            ],
+        },
+        {
+            id: "newsmanagement",
+            label: "News Management",
+            icon: "ri-dashboard-2-line",
+            link: "/#",
+            click: function (e) {
+                e.preventDefault();
+                setIsNewsMgt(!isNewsMgt);
+                setIscurrentState('NewsMgt');
+                updateIconSidebar(e);
+            },
+            stateVariables: isNewsMgt,
+            subItems: [
+                {
+                    id: "clients",
+                    label: "Clients",
+                    link: "/client-setting",
+                    parentId: "newsmanagement",
+                },
+                {
+                    id: "keywords",
+                    label: "Keywords",
+                    link: "/keyword-setting",
+                    parentId: "newsmanagement",
                 },
             ],
         },
