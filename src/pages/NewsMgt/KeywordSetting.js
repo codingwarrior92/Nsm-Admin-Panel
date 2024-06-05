@@ -74,7 +74,7 @@ const KeywordSetting = () => {
         }
     };
 
-    document.title = "Dashboard | Velzon - React Admin & Dashboard Template";
+    document.title ="Meme Analyzer | Keyword Settings";
     return (
         <React.Fragment>
             <div className="page-content">

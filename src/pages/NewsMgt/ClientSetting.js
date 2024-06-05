@@ -79,7 +79,7 @@ const ClientSetting = () => {
     }
   };
 
-  document.title = "Dashboard | Velzon - React Admin & Dashboard Template";
+  document.title = "Meme Analyzer | Client Settings";
   return (
     <React.Fragment>
       <div className="page-content">
