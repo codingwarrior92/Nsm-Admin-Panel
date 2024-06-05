@@ -353,3 +353,15 @@ export const getJobApplicationList = () => api.get(url.GET_APPLICATION_LIST);
 
 //API Key
 export const getAPIKey = () => api.get(url.GET_API_KEY);
+
+//Client Settings
+export const getClientLists = () => api.get(url.CLIENT_BASE_URL + `/list`);
+export const addClientList = () => api.post(url.CLIENT_BASE_URL + `/add`);
+export const editClientList = (id) => api.put(url.CLIENT_BASE_URL + `/${id}/edit`);
+export const deleteClientList = (id) => api.delete(url.CLIENT_BASE_URL + `/${id}/delete`);
+
+// Keyword Settings
+export const getKeywordLists = () => api.get(url.KEYWORD_BASE_URL + '/list');
+export const addKeywordList = () => api.post(url.KEYWORD_BASE_URL + `/add`);
+export const editKeywordList = (id) => api.put(url.KEYWORD_BASE_URL + `/${id}/edit`);
+export const deleteKeywordList = (id) => api.delete(url.KEYWORD_BASE_URL + `/${id}/delete`);

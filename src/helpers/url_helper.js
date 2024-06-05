@@ -225,3 +225,9 @@ export const GET_APPLICATION_LIST = "/application-list";
 
 //JOB APPLICATION
 export const GET_API_KEY = "/api-key";
+
+//CLIENT SETTINGS
+export const CLIENT_BASE_URL = "/client";
+
+//KEYWORD SETTINGS
+export const KEYWORD_BASE_URL = '/keyword';
