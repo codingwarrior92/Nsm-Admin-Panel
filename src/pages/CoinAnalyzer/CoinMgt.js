@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "reactstrap";
 
 const CoinMgt = () => {
-    document.title ="Dashboard | Velzon - React Admin & Dashboard Template";
+    document.title ="Meme Analyzer | Coin Management";
     return (
         <React.Fragment>
             <div className="page-content">
