@@ -231,3 +231,6 @@ export const CLIENT_BASE_URL = "/client";
 
 //KEYWORD SETTINGS
 export const KEYWORD_BASE_URL = "/keyword";
+
+// COINMARKETCAP LIST
+export const CRYPTO_BASE_URL = "/coin"

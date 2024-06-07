@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
+import GraphRowContainer from "./GraphRowContainer";
 
 const CoinGraph = () => {
     document.title ="Meme Analyzer | Coin Graph";
@@ -7,30 +8,13 @@ const CoinGraph = () => {
         <React.Fragment>
             <div className="page-content">
                 <Container fluid>
-                    <Row>
+                    <Row className="project-wrapper">
                         <Col>
-                            <div className="h-100">
-                                {/* <Section /> */}
-                                {/* <Row>
-                  <Widget />
-                </Row> */}
-                                {/* <Row>
-                  <Col xl={8}>
-                    <Revenue />
-                  </Col>
-                  <SalesByLocations />
-                </Row> */}
-                                <Row>
-                                    Coin Graph Page
-                                    {/* <TopSellers /> */}
-                                </Row>
-                                {/* <Row>
-                  <StoreVisits />
-                  <RecentOrders />
-                </Row> */}
-                            </div>
+                            <GraphRowContainer />
+                            <GraphRowContainer />
+                            <GraphRowContainer />
+                            <GraphRowContainer />
                         </Col>
-                        {/* <RecentActivity /> */}
                     </Row>
                 </Container>
             </div>
