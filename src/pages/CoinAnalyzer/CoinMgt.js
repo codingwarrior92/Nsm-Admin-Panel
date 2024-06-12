@@ -12,19 +12,23 @@ const CoinMgt = () => {
   const [coinList, setCoinList] = useState([]);
   const [numTokens, setNumTokens] = useState(0);
   const [selectedCoins, setSelectedCoins] = useState([]);
+  const [keyword, setKeyword] = useState('');
   const msoeawqmRef = useRef(null);
+  const handleOnChange = (event) => {
+    setKeyword(event.target.value);
+  }
 
   useEffect(() => {
     msoeawqmRef.current?.playFromBeginning();
   }, [])
-
   useEffect(() => {
     async function fetchData() {
       const response = await getMemeLists({
-        'start': 1 + page * 100,
+        'start': 0 + page * 100,
         'limit': 100,
+        'keyword': keyword
       });
-      const num_tokens = Math.ceil(response.data.num_tokens / 100);
+      const num_tokens = Math.ceil(response.data.stats.total / 100);
       setNumTokens(num_tokens);
       setCoinList(response.data.coins);
 
@@ -36,7 +40,7 @@ const CoinMgt = () => {
       document.documentElement.scrollTop = 0;
     }
     fetchData();
-  }, [page]);
+  }, [page, keyword]);
 
   const handlePageClick = (event) => {
     setPage(event.selected);
@@ -63,7 +67,7 @@ const CoinMgt = () => {
                       <Col className="col-sm">
                         <div className="d-flex justify-content-sm-end">
                           <div className="search-box ms-2">
-                            <input type="text" className="form-control search" placeholder="Search..." />
+                            <input type="text" className="form-control search" placeholder="Search..." value={keyword} onChange={handleOnChange}/>
                             <i className="ri-search-line search-icon"></i>
                           </div>
                         </div>
@@ -84,7 +88,6 @@ const CoinMgt = () => {
                               <th className="sort" data-sort="symbol">Symbol</th>
                               <th className="sort" data-sort="price">Price</th>
                               <th className="sort" data-sort="market_cap">Market Cap</th>
-                              <th className="sort" data-sort="circulating_supply">Circulating Supply</th>
                             </tr>
                           </thead>
                           <tbody className="list form-check-all">
@@ -95,18 +98,27 @@ const CoinMgt = () => {
                                     <input className="form-check-input"
                                       type="checkbox"
                                       name="chk_child"
-                                      onChange={() => handleCheckBox(item.id)}
-                                      checked={selectedCoins.some(({coin_id}) => coin_id === item.id)}
+                                      onChange={() => handleCheckBox(item.uuid)}
+                                      checked={selectedCoins.some(({coin_id}) => coin_id === item.uuid)}
                                       value={key}
                                     />
                                   </div>
                                 </th>
-                                <td className="id">{item.id}</td>
-                                <td className="name">{item.name}</td>
+                                <td className="id">{item.uuid}</td>
+                                <td className="name">
+                                  <div class="d-flex align-items-center">
+                                    <div class="me-2">
+                                      <img src={item.iconUrl} class="avatar-xxs"/>
+                                    </div>
+                                    <div>
+                                      <h6 class="fs-14 mb-0">{item.name}</h6>
+                                    </div>
+                                  </div>
+
+                                </td>
                                 <td className="symbol">{item.symbol}</td>
-                                <td className="price">${item.quote.USD.price}</td>
-                                <td className="market_cap">${item.quote.USD.market_cap}</td>
-                                <td className="circulating_supply">{item.total_supply} {item.symbol}</td>
+                                <td className="price">${item.price}</td>
+                                <td className="market_cap">${item.marketCap}</td>
                               </tr>
                             ))}
                           </tbody>

@@ -367,6 +367,6 @@ export const editKeywordList = (id, keyword) => api.put(url.KEYWORD_BASE_URL + `
 export const deleteKeywordList = (id) => api.delete(url.KEYWORD_BASE_URL + `/${id}/delete`);
 
 // Coin List From Coin Market Cap
-export const getMemeLists = (limit) => api.get(url.CRYPTO_BASE_URL + '/cryptocurrency/category', limit);
+export const getMemeLists = (param) => api.get(url.CRYPTO_BASE_URL + '/cryptocurrency/category', param);
 export const getSelectedCoins = () => api.get(url.CRYPTO_BASE_URL + '/cryptocurrency/get');
 export const updateSelectedCoins = (coin_id) => api.create(url.CRYPTO_BASE_URL + '/cryptocurrency/update', coin_id);
